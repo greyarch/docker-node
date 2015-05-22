@@ -26,3 +26,6 @@ RUN apk-install curl make gcc g++ python paxctl libgcc libstdc++ && \
   rm -rf /etc/ssl /${CMD}-${VERSION} ${RM_DIRS} \
     /usr/share/man /tmp/* /root/.npm /root/.node-gyp \
     /usr/lib/node_modules/npm/man /usr/lib/node_modules/npm/doc /usr/lib/node_modules/npm/html
+    
+ENTRYPOINT ["node"]
+CMD ["--version"]
